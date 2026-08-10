@@ -1,0 +1,51 @@
+/* Animate.css - Versión Optimizada para EcoPulse */
+/* Solo incluye las animaciones utilizadas en tu HTML: fadeInLeft, fadeInRight, zoomIn */
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/* fadeInLeft (Usado en Servicios y Contacto) */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+/* fadeInRight (Usado en Servicios) */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+/* zoomIn (Usado en Hero y Tarjetas) */
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.zoomIn {
+  animation-name: zoomIn;
+}
