@@ -1,284 +1,499 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO -->
-  <title>EcoPulse Dynamics | Energía Inteligente</title>
-  <meta name="description" content="Energía inteligente para ciudades que nunca duermen. Soluciones Smart Grid, Solar y V2G.">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="./assets/img/favicon.ico" type="image/png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- OPTIMIZACIÓN 1: Preconexión a orígenes externos -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>EcoPulse Dynamics | Energía Inteligente</title>
+  <meta name="description" content="Energía inteligente para ciudades que nunca duermen. Soluciones Smart Grid, Solar y V2G." />
+
+  <link rel="icon" href="./assets/img/favicon.ico" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/font-awesome.css" rel="stylesheet" />
+  <link href="assets/css/animate.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
   
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
-  
-  <!-- Estilos -->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/font-awesome.css" rel="stylesheet">
-  <link href="assets/css/animate.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/main.js"></script>
 </head>
 <body>
 
-<!-- HERO SECTION - DISEÑO MEJORADO -->
-<section id="hero_section" class="top_cont_outer">
-  <div class="hero_wrapper">
-    <div class="container">
-      <div class="hero_section">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="top_left_cont zoomIn wow animated"> 
-              <!-- Etiqueta superior decorativa -->
-              <span class="hero-tag"> Ingeniería Sostenible </span>
-              
-              <!-- Título Principal con efecto -->
-              <h2>Eco<span>Pulse</span></h2>
-              
-              <!-- Eslogan mejorado visualmente -->
-              <div class="hero-slogan-box">
-                <h3>Energía inteligente para ciudades que nunca duermen.</h3>
+  <section id="hero_section" class="top_cont_outer">
+    <div class="hero_wrapper">
+      <div class="container">
+        <div class="hero_section">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="top_left_cont zoomIn wow animated">
+                <span class="hero-tag"> Ingeniería Sostenible </span>
+
+                <h2>Eco<span>Pulse</span></h2>
+
+                <div class="hero-slogan-box">
+                  <h3>Energía inteligente para ciudades que nunca duermen.</h3>
+                </div>
+
+                <a href="#servicio-v2g" class="btn-hero animated fadeInUp wow" data-wow-delay="0.5s">Descubre Cómo Funciona</a>
               </div>
-              
-              <!-- Botón de acción opcional -->
-              <a href="#servicio-v2g" class="btn-hero animated fadeInUp wow" data-wow-delay="0.5s">Descubre Cómo Funciona</a>
             </div>
-          </div> 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- HEADER -->
-<header id="header_wrapper">
-  <div class="container">
-    <div class="header_box">
-      <nav class="navbar navbar-inverse" role="navigation">
-        <div class="navbar-header">
-          <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> 
-            <span class="sr-only">Toggle navigation</span> 
-            <span class="icon-bar"></span> 
-            <span class="icon-bar"></span> 
-            <span class="icon-bar"></span> 
-          </button>
-          <a class="navbar-brand scroll-link" href="#hero_section">EcoPulse</a>
-        </div>
-        
-        <div id="main-nav" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navStyle" id="mainNav">
-            <li class="active"><a href="#hero_section" class="scroll-link">Inicio</a></li>
-            <li><a href="#servicio-v2g" class="scroll-link">Movilidad V2G</a></li>
-            <li><a href="#servicio-solar" class="scroll-link">Solar Modular</a></li>
-            <li><a href="#servicio-smartgrid" class="scroll-link">Smart Grid</a></li>
-            <li><a href="#about-us" class="scroll-link">Nosotros</a></li>
-            <li><a href="#contact" class="scroll-link">Contacto</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-</header>
-
-<!-- SERVICIO 1: V2G -->
-<section id="servicio-v2g" class="service_section">
-  <div class="inner_wrapper about-us aboutUs-container fadeInLeft animated wow">
+  <header id="header_wrapper">
     <div class="container">
-      <div class="inner_section">
-        <div class="row">
-          <div class="col-md-6"> 
-            <img class="img-responsive center-block" src="assets/img/v2g.webp" alt="Tecnología V2G" loading="lazy" width="600" height="400"> 
+      <div class="header_box">
+        <nav class="navbar navbar-inverse" role="navigation">
+          <div class="navbar-header">
+            <a class="navbar-brand scroll-link" href="#hero_section">EcoPulse</a>
+
+            <div class="header-utils">
+              <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox-theme">
+                  <input type="checkbox" id="checkbox-theme" />
+                  <div class="slider-theme round">
+                    <i class="fa fa-sun-o sun-icon"></i>
+                    <i class="fa fa-moon-o moon-icon"></i>
+                  </div>
+                </label>
+              </div>
+
+              <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
           </div>
-          <div class="col-md-6">
-            <div class="delay-03s animated wow fadeInRight">
-              <span class="service-badge">Servicio 01</span>
-              <h2>V2G (Vehicle-to-Grid)</h2>
-              <p>Estaciones de carga inteligentes que permiten devolver energía a la red. Tu coche eléctrico se convierte en una batería móvil que estabiliza la ciudad.</p> 
-              <ul class="about-us-list">
-                <li class="points">Carga bidireccional inteligente.</li>
-                <li class="points">Reducción de costes energéticos.</li>
-                <li class="points">Monetización de energía excedente.</li>
-              </ul>
+
+          <div id="main-nav" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navStyle" id="mainNav">
+              <li class="active"><a href="#hero_section" class="scroll-link">Inicio</a></li>
+              <li><a href="#servicio-v2g" class="scroll-link">Movilidad V2G</a></li>
+              <li><a href="#servicio-solar" class="scroll-link">Solar Modular</a></li>
+              <li><a href="#servicio-smartgrid" class="scroll-link">Smart Grid</a></li>
+              <li><a href="#sobre-nosotros" class="scroll-link">Nosotros</a></li>
+              <li><a href="#dashboard" class="scroll-link">Dashboard</a></li>
+              <li><a href="#contact" class="scroll-link">Contacto</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="servicio-v2g" class="service_section">
+    <div class="inner_wrapper about-us aboutUs-container fadeInLeft animated wow">
+      <div class="container">
+        <div class="inner_section">
+          <div class="row">
+            <div class="col-md-6">
+              <img class="img-responsive center-block" src="assets/img/v2g.webp" alt="Tecnología V2G" loading="lazy" width="600" height="400" />
+            </div>
+            <div class="col-md-6">
+              <div class="delay-03s animated wow fadeInRight">
+                <span class="service-badge">Servicio 01</span>
+                <h2>V2G (Vehicle-to-Grid)</h2>
+                <p>Estaciones de carga inteligentes que permiten devolver energía a la red. Tu coche eléctrico se convierte en una batería móvil que estabiliza la ciudad.</p>
+                <ul class="about-us-list">
+                  <li class="points">Carga bidireccional inteligente.</li>
+                  <li class="points">Reducción de costes energéticos.</li>
+                  <li class="points">Monetización de energía excedente.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SERVICIO 2: SOLAR MODULAR -->
-<section id="servicio-solar" class="service_section alt-bg">
-  <div class="inner_wrapper about-us aboutUs-container fadeInRight animated wow">
+  <section id="servicio-solar" class="service_section alt-bg">
+    <div class="inner_wrapper about-us aboutUs-container fadeInRight animated wow">
+      <div class="container">
+        <div class="inner_section">
+          <div class="row">
+            <div class="col-md-6 col-md-push-6">
+              <img class="img-responsive center-block" src="assets/img/solar.webp" alt="Paneles Solares" loading="lazy" width="600" height="400" />
+            </div>
+            <div class="col-md-6 col-md-pull-6">
+              <div class="delay-03s animated wow fadeInLeft">
+                <span class="service-badge">Servicio 02</span>
+                <h2>Solar Modular</h2>
+                <p>Fachadas fotovoltaicas verticales que integran energía limpia en la arquitectura moderna. Olvídate de los paneles tradicionales en tejados.</p>
+                <ul class="about-us-list">
+                  <li class="points">Diseño arquitectónico integrado.</li>
+                  <li class="points">Máxima eficiencia en espacios reducidos.</li>
+                  <li class="points">Monitorización en tiempo real.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicio-smartgrid" class="service_section">
+    <div class="inner_wrapper about-us aboutUs-container fadeInLeft animated wow">
+      <div class="container">
+        <div class="inner_section">
+          <div class="row">
+            <div class="col-md-6">
+              <img class="img-responsive center-block" src="assets/img/smart.webp" alt="Smart Grid AI" loading="lazy" width="600" height="400" />
+            </div>
+            <div class="col-md-6">
+              <div class="delay-03s animated wow fadeInRight">
+                <span class="service-badge">Servicio 03</span>
+                <h2>Smart Grid AI</h2>
+                <p>Optimización avanzada de redes eléctricas mediante algoritmos de Inteligencia Artificial. Predecimos la demanda y distribuimos la energía de forma eficiente en tiempo real.</p>
+                <ul class="about-us-list">
+                  <li class="points">Análisis predictivo de consumo.</li>
+                  <li class="points">Detección automática de fallos.</li>
+                  <li class="points">Integración de fuentes renovables.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-nosotros" class="about_section alt-bg">
     <div class="container">
-      <div class="inner_section">
-        <div class="row">
-          <div class="col-md-6 col-md-push-6">
-            <img class="img-responsive center-block" src="assets/img/solar.webp" alt="Paneles Solares" loading="lazy" width="600" height="400"> 
-          </div>
-          <div class="col-md-6 col-md-pull-6">
-            <div class="delay-03s animated wow fadeInLeft">
-              <span class="service-badge">Servicio 02</span>
-              <h2>Solar Modular</h2>
-              <p>Fachadas fotovoltaicas verticales que integran energía limpia en la arquitectura moderna. Olvídate de los paneles tradicionales en tejados.</p> 
-              <ul class="about-us-list">
-                <li class="points">Diseño arquitectónico integrado.</li>
-                <li class="points">Máxima eficiencia en espacios reducidos.</li>
-                <li class="points">Monitorización en tiempo real.</li>
-              </ul>
-            </div>
-          </div>
+      <div class="about-header">
+        <span class="service-badge">Sobre Nosotros</span>
+        <h2>El Cerebro de EcoPulse</h2>
+        <p class="about-subtitle">Aceleramos la transición ecológica mediante inteligencia artificial aplicada a la red eléctrica y soluciones solares de última generación.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-icon"><i class="fa fa-bolt"></i></div>
+          <h3>IA Avanzada</h3>
+          <p>Algoritmos que optimizan la carga y descarga de energía urbana en tiempo real.</p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-icon"><i class="fa fa-flask"></i></div>
+          <h3>I+D Constante</h3>
+          <p>Invertimos en investigación continua para resolver los retos energéticos del futuro.</p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-icon"><i class="fa fa-leaf"></i></div>
+          <h3>Sostenibilidad</h3>
+          <p>Compromiso total y transparente con la reducción drástica de la huella de carbono.</p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-icon"><i class="fa fa-bar-chart"></i></div>
+          <h3>Smart Data</h3>
+          <p>Transformamos datos complejos en decisiones automatizadas, rentables y ecológicas.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SERVICIO 3: SMART GRID AI -->
-<section id="servicio-smartgrid" class="service_section">
-  <div class="inner_wrapper about-us aboutUs-container fadeInLeft animated wow">
+  <section id="dashboard" class="ep-dashboard-root">
+    <div class="dash-loader" id="dashLoader">
+      <div class="loader-pulse"></div>
+      <div class="loader-text">Inicializando EcoPulse AI Grid...</div>
+    </div>
+
+    <div class="dash-container">
+      <aside class="dash-sidebar">
+        <div class="sidebar-header">
+          <div class="sidebar-brand">Eco<span>Pulse</span></div>
+          <div class="node-badge"><span class="pulse-dot"></span> Nodo Plasencia</div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="#" class="nav-item active" data-target="tab-resumen">
+            <i class="fa fa-bar-chart"></i> Resumen en Vivo
+          </a>
+          <a href="#" class="nav-item" data-target="tab-calculadora">
+            <i class="fa fa-leaf"></i> <span>Simulador Pro</span>
+          </a>
+          <a href="#" class="nav-item" data-target="tab-v2g">
+            <i class="fa fa-car"></i> Smart Grid V2G
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="weather-widget">
+            <i class="fa fa-thermometer-half"></i>
+            <div>
+              <small>Temp. Local</small>
+              <strong id="live-temp">--°C</strong>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="dash-main">
+        <header class="dash-topbar">
+          <div>
+            <h2 class="topbar-title">Monitor de Rendimiento</h2>
+            <p class="topbar-subtitle">Métricas en tiempo real de tu infraestructura</p>
+          </div>
+        </header>
+
+        <div class="dash-content">
+          <div id="tab-resumen" class="dash-tab active">
+            <div class="kpi-grid">
+              <div class="kpi-card" id="rendimiento-solar">
+                <div class="kpi-header">Rendimiento <i class="fa fa-sun-o"></i></div>
+                <div class="kpi-value"><span class="counter">0.00</span> <span class="kpi-unit">kW</span></div>
+              </div>
+
+              <div class="kpi-card" id="generacion-total">
+                <div class="kpi-header">Generación <i class="fa fa-leaf"></i></div>
+                <div class="kpi-value"><span class="counter">0.0</span> <span class="kpi-unit">kWh</span></div>
+              </div>
+
+              <div class="kpi-card" id="impacto-economico">
+                <div class="kpi-header">Ahorro <i class="fa fa-euro"></i></div>
+                <div class="kpi-value"><span class="counter">0.00</span> <span class="kpi-unit">€</span></div>
+              </div>
+            </div>
+
+            <div class="panel-card mt-24">
+              <div class="panel-header">
+                <h3>Curva de Carga vs Producción</h3>
+                <div class="panel-badge">Últimas 24h</div>
+              </div>
+              <div class="chart-wrapper"><canvas id="mainChart"></canvas></div>
+            </div>
+          </div>
+
+          <div id="tab-calculadora" class="dash-tab">
+            <div class="panel-card">
+              <div class="panel-header">
+                <h3>Simulador de Dimensionamiento Inteligente</h3>
+                <p class="txt-muted">Desliza para ajustar tu perfil de consumo</p>
+              </div>
+
+              <div class="sim-wizard-grid mt-24">
+                <div class="input-card">
+                  <div class="card-icon"><i class="fa fa-euro"></i></div>
+                  <label>Gasto Mensual aproximado</label>
+                  <input type="range" id="v-gasto" min="30" max="500" value="120" class="ep-slider" />
+                  <div class="slider-val"><span id="val-gasto">120</span> €/mes</div>
+                </div>
+
+                <div class="input-card">
+                  <div class="card-icon"><i class="fa fa-sun-o"></i></div>
+                  <label>Exposición Solar</label>
+                  <select id="v-clima" class="input-pro">
+                    <option value="5.5" selected>Excelente (Sur)</option>
+                    <option value="4.5">Media (Este/Oeste)</option>
+                    <option value="3.5">Baja (Norte)</option>
+                  </select>
+                </div>
+
+                <div class="input-card">
+                  <div class="card-icon"><i class="fa fa-bolt"></i></div>
+                  <label>Potencia del Panel</label>
+                  <select id="v-panel" class="input-pro">
+                    <option value="450">Premium (450W)</option>
+                    <option value="350">Standard (350W)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="visual-results mt-24">
+                <div class="res-main-box">
+                  <div class="res-circle">
+                    <strong id="res-num-paneles">0</strong>
+                    <span>Paneles</span>
+                  </div>
+                  <div class="res-info-text">
+                    <h4 id="res-desc" class="txt-green">Inicia el ajuste para calcular</h4>
+                    <div class="meta-data-grid">
+                      <span><i class="fa fa-arrows-alt"></i> Espacio: <strong id="res-espacio">0</strong> m²</span>
+                      <span><i class="fa fa-leaf"></i> CO₂ evitado: <strong id="res-arboles">0</strong> kg/año</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-v2g" class="dash-tab">
+            <div class="grid-2-cols">
+              <div class="panel-card">
+                <div class="panel-header">
+                  <h3>Protocolo V2G (Vehicle-to-Grid)</h3>
+                </div>
+
+                <div class="control-box mt-16">
+                  <div class="control-text">
+                    <strong>Sincronización Bidireccional</strong>
+                    <span>Habilitar descarga activa a la red</span>
+                  </div>
+                  <label class="switch-pro">
+                    <input type="checkbox" id="v2g-toggle" />
+                    <span class="slider-pro"></span>
+                  </label>
+                </div>
+                <div class="data-list mt-24">
+                  <div class="data-row"><span>Estado del Sistema</span> <span id="v2g-status" class="badge-neutral">Standby</span></div>
+                  <div class="data-row"><span>Inyección en Red</span> <strong id="v2g-power">0.0 kW</strong></div>
+                  <div class="data-row"><span>Crédito Generado</span> <strong id="v2g-money" class="txt-green">0.00 €</strong></div>
+                </div>
+              </div>
+
+              <div class="panel-card flex-center">
+                <div class="flow-diagram">
+                  <div class="flow-node">🏠</div>
+                  <div class="flow-path"><div class="flow-particle" id="fDot"></div></div>
+                  <div class="flow-node">🚙</div>
+                </div>
+              </div>
+              <div class="v2g-help-container mt-16">
+                <details class="v2g-details">
+                  <summary class="v2g-summary">
+                    <span><i class="fa fa-question-circle"></i> ¿Cómo funciona el Smart Grid V2G?</span>
+                    <i class="fa fa-chevron-down arrow"></i>
+                  </summary>
+
+                  <div class="v2g-help-content">
+                    <p>El sistema <strong>V2G (Vehicle-to-Grid)</strong> convierte tu coche en una batería inteligente para tu hogar.</p>
+                    <ul class="v2g-list">
+                      <li><i class="fa fa-check txt-green"></i> <strong>Carga Inteligente:</strong> El coche guarda energía cuando el sol brilla o la luz es más barata.</li>
+                      <li><i class="fa fa-check txt-green"></i> <strong>Apoyo a la Red:</strong> Si hay mucha demanda de luz en la ciudad, tu coche "presta" un poco de su energía.</li>
+                      <li><i class="fa fa-check txt-green"></i> <strong>Beneficio:</strong> A cambio de esa ayuda, recibes descuentos o dinero en tu factura eléctrica.</li>
+                    </ul>
+
+                    <div class="v2g-mini-note">
+                      <small>Tu coche siempre mantendrá una carga mínima de seguridad para que nunca te quedes sin batería para viajar.</small>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <footer class="footer_wrapper" id="contact">
     <div class="container">
-      <div class="inner_section">
+      <section class="page_section contact">
+        <div class="contact_section">
+          <h2>Contactanos</h2>
+          <h6>Hub Tecnológico "La Nave", Plasencia</h6>
+        </div>
         <div class="row">
-          <div class="col-md-6"> 
-            <img class="img-responsive center-block" src="assets/img/smart.webp" alt="Smart Grid AI" loading="lazy" width="600" height="400"> 
+          <div class="col-lg-4 wow fadeInLeft">
+            <div class="contact_info">
+              <div class="detail">
+                <h4>Localización</h4>
+                <p>Hub Tecnológico "La Nave"</p>
+              </div>
+
+              <div class="detail">
+                <h4>Número de teléfono</h4>
+                <p>+34 927 01 77 74</p>
+              </div>
+
+              <div class="detail">
+                <h4>Email</h4>
+                <p>info@ecopulse.com</p>
+              </div>
+            </div>
+
+            <ul class="social_links">
+              <li><a href="https://informatica.iesvalledeljerteplasencia.es/" target="_blank" rel="noopener" aria-label="Web IES Valle del Jerte"><i class="fa fa-globe"></i></a></li>
+              <li><a href="https://x.com/IESValleJPla" target="_blank" rel="noopener" aria-label="X Twitter"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/iesvallejpla/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/IESValledelJertePlasencia/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+            </ul>
           </div>
-          <div class="col-md-6">
-            <div class="delay-03s animated wow fadeInRight">
-              <span class="service-badge">Servicio 03</span>
-              <h2>Smart Grid AI</h2>
-              <p>Optimización avanzada de redes eléctricas mediante algoritmos de Inteligencia Artificial. Predecimos la demanda y distribuimos la energía de forma eficiente en tiempo real.</p> 
-              <ul class="about-us-list">
-                <li class="points">Análisis predictivo de consumo.</li>
-                <li class="points">Detección automática de fallos.</li>
-                <li class="points">Integración de fuentes renovables.</li>
-              </ul>
+
+          <div class="col-lg-8 wow fadeInLeft delay-06s">
+            <div class="form form-pro">
+              <form id="ep-contact-form" novalidate>
+                <div class="ep-form-group">
+                  <div class="input-wrapper">
+                    <input class="input-text" type="text" id="f-nombre" placeholder="Nombre *" required />
+                    <i class="status-icon fa fa-asterisk"></i>
+                  </div>
+                  <span class="error-msg">El nombre es obligatorio.</span>
+                </div>
+
+                <div class="ep-form-group">
+                  <div class="input-wrapper">
+                    <input class="input-text" type="text" id="f-empresa" placeholder="Empresa (Opcional)" />
+                    <i class="status-icon fa fa-building-o"></i>
+                  </div>
+                </div>
+
+                <div class="ep-form-group">
+                  <label class="form-label">Selecciona Tipo de Proyecto (Mínimo 2 opciones) *</label>
+                  <small style="color: #9CA3AF; display: block; margin-bottom: 8px;">Mantén pulsado Ctrl (o Cmd en Mac) para seleccionar varios.</small>
+                  <div class="input-wrapper">
+                    <select class="input-text multi-select" id="f-proyecto" multiple required>
+                      <option value="smart-grid">Smart Grid AI</option>
+                      <option value="solar-modular">Solar Modular</option>
+                      <option value="v2g">V2G Solutions</option>
+                      <option value="consultoria">Consultoría Energética</option>
+                    </select>
+                    <i class="status-icon fa fa-list"></i>
+                  </div>
+                  <span class="error-msg">Debes seleccionar al menos 2 proyectos.</span>
+                </div>
+
+                <div class="ep-form-group">
+                  <div class="input-wrapper">
+                    <textarea class="input-text text-area" id="f-mensaje" placeholder="Explícanos tu caso *" rows="5" required></textarea>
+                    <i class="status-icon fa fa-comment-o"></i>
+                  </div>
+
+                  <div class="msg-counters">
+                    <div class="counter-badge" id="cnt-min"><i class="fa fa-arrow-down"></i> Faltan: <b>30</b> char</div>
+                    <div class="counter-badge" id="cnt-max"><i class="fa fa-arrow-up"></i> Disponibles: <b>1000</b> char</div>
+                    <div class="counter-badge" id="cnt-words"><i class="fa fa-font"></i> Palabras: <b>0</b> / 4 min</div>
+                  </div>
+                  <span class="error-msg">El mensaje no cumple los requisitos mínimos.</span>
+                </div>
+
+                <input class="input-btn" type="submit" id="f-submit" value="Enviar Solicitud" />
+                <div id="form-success" class="success-msg" style="display:none;"><i class="fa fa-check-circle"></i> ¡Formulario validado y listo para enviar!</div>
+              </form>
             </div>
           </div>
         </div>
+      </section>
+    </div>
+  </footer>
+
+  <footer class="footer_root">
+    <div class="container">
+      <div class="footer_divider"></div>
+      <div class="footer_content">
+        <p>© 2026 Jorge De Vicente Gómez — Este proyecto se realiza con fines educativos bajo la licencia MIT.</p>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- SOBRE NOSOTROS -->
-<section id="about-us">
-  <div class="container">
-    <div class="text-center">
-      <h2>Sobre Nosotros</h2>
-      <p class="lead mission-text">Aceleramos la transición ecológica mediante inteligencia artificial aplicada a la red eléctrica y soluciones solares de última generación.</p>
-    </div>
-    
-    <div class="service_wrapper">
-      <div class="row">
-        
-        <div class="col-md-3 col-sm-6">
-          <div class="service_block animated wow zoomIn"> 
-            <div class="service_icon"><span><i class="fa fa-bolt"></i></span></div>
-            <h3>IA Avanzada</h3>
-            <p>Algoritmos que optimizan la carga y descarga de energía urbana.</p>
-          </div>
-        </div>
-        
-        <div class="col-md-3 col-sm-6"> 
-          <div class="service_block animated wow zoomIn" data-wow-delay="0.1s"> 
-            <div class="service_icon"><span><i class="fa fa-flask"></i></span></div> 
-            <h3>I+D Constante</h3>
-            <p>Invertimos en investigación para los retos energéticos del futuro.</p>
-          </div>
-        </div>
-        
-        <div class="col-md-3 col-sm-6">
-          <div class="service_block animated wow zoomIn" data-wow-delay="0.2s"> 
-            <div class="service_icon"><span><i class="fa fa-leaf"></i></span></div>
-            <h3>Sostenibilidad</h3>
-            <p>Compromiso total con la reducción de la huella de carbono.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6">
-          <div class="service_block animated wow zoomIn" data-wow-delay="0.3s"> 
-            <div class="service_icon"><span><i class="fa fa-bar-chart"></i></span></div>
-            <h3>Smart Data</h3>
-            <p>Transformamos datos en decisiones rentables y ecológicas.</p>
-          </div>
-        </div>
-
-      </div> 
-    </div>
-  </div>
-</section>
-
-<!-- CONTACTO -->
-<footer class="footer_wrapper" id="contact">
-  <div class="container">
-    <section class="page_section contact"> 
-      <div class="contact_section">
-        <h2>Contactanos</h2>
-        <h6>Hub Tecnológico "La Nave", Plasencia</h6>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 wow fadeInLeft">	
-          <div class="contact_info">
-            
-            <div class="detail">
-              <h4>Localización</h4>
-              <p>Hub Tecnológico "La Nave"</p>
-            </div>
-
-            <div class="detail">
-              <h4>Número de teléfono</h4>
-              <p>+34 927 01 77 74</p>
-            </div>
-
-            <div class="detail">
-              <h4>Email</h4>
-              <p>info@ecopulse.com</p>
-            </div> 
-          </div>
-          
-          <!-- REDES SOCIALES ACTUALIZADAS -->
-          <ul class="social_links">
-            <li><a href="https://informatica.iesvalledeljerteplasencia.es/" target="_blank" rel="noopener" aria-label="Web IES Valle del Jerte"><i class="fa fa-globe"></i></a></li>
-            <li><a href="https://x.com/IESValleJPla" target="_blank" rel="noopener" aria-label="X Twitter"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/iesvallejpla/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="https://www.facebook.com/IESValledelJertePlasencia/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
-          </ul>
-
-        </div>
-        
-        <div class="col-lg-8 wow fadeInLeft delay-06s">
-          <div class="form">
-            <form action="#" method="post">
-              <input class="input-text" type="text" name="name" placeholder="Nombre *" required>
-              <input class="input-text" type="text" name="company" placeholder="Empresa *" required>
-              <select class="input-text" required>
-                <option value="" disabled selected>Selecciona Tipo de Proyecto *</option>
-                <option value="smart-grid">Smart Grid AI</option>
-                <option value="solar-modular">Solar Modular</option>
-                <option value="v2g">V2G Solutions</option>
-              </select>
-              <textarea class="input-text text-area" placeholder="Mensaje *" rows="5" required></textarea>
-              <input class="input-btn" type="submit" value="Enviar Solicitud">
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-</footer>
-
-<!-- Scripts con DEFER -->
-<script src="js/jquery-1.11.0.min.js" defer></script>
-<script src="js/bootstrap.min.js" defer></script>
-<script src="js/jquery-scrolltofixed.js" defer></script>
-<script src="js/jquery.nav.js" defer></script> 
-<script src="js/wow.js" defer></script> 
-<script src="js/custom.js" defer></script>
+  <script src="js/jquery-1.11.0.min.js" defer></script>
+  <script src="js/bootstrap.min.js" defer></script>
+  <script src="js/jquery-scrolltofixed.js" defer></script>
+  <script src="js/jquery.nav.js" defer></script>
+  <script src="js/wow.js" defer></script>
+  <script src="js/custom.js" defer></script>
 
 </body>
 </html>
