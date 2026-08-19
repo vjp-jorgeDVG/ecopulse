@@ -358,4 +358,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach((el) => revealObserver.observe(el));
   }
+  
 });
+
+// --- 2. NAVEGACIÓN DE PESTAÑAS (TABS DEL DASHBOARD) ---
+  // (Código de las pestañas...)
+
+  // --- 3. GESTIÓN DEL MODO OSCURO ---  <-- (ESTE BLOQUE AHORA VA ANTES)
+  const themeSwitch = document.getElementById('checkbox-theme');
+
+  if (localStorage.getItem('ep_theme') === 'dark-theme') {
+    document.body.classList.add('dark-theme');
+    if (themeSwitch) themeSwitch.checked = true;
+  }
+
+  if (themeSwitch) {
+    themeSwitch.addEventListener('change', function () {
+      const isDark = this.checked;
+      document.body.classList.toggle('dark-theme', isDark);
+      localStorage.setItem('ep_theme', isDark ? 'dark-theme' : 'light-theme');
+
+      if (miGrafica) {
+        miGrafica.data.datasets[1].borderColor = isDark ? '#FFFFFF' : '#000000';
+        miGrafica.options.plugins.legend.labels.color = isDark ? '#9CA3AF' : '#1F2937';
+        miGrafica.update();
+      }
+    });
+  }
+
+  // --- 4. GRÁFICA PRINCIPAL (CHART.JS) --- <-- (LA GRÁFICA AHORA VA DESPUÉS)
+  const canvas = document.getElementById('mainChart');
+  // (Resto del código de la gráfica...)
